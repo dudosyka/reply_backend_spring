@@ -10,10 +10,10 @@ plugins {
 
 dependencies {
     implementation("org.apache.commons:commons-text")
-    implementation(project(":utilities"))
+    implementation(project(":lib"))
 }
 
 application {
     // Define the main class for the application.
-    mainClass.set("com.reply.app.AppKt")
+    mainClass.set("com.reply.deliveryservice.AppKt")
 }

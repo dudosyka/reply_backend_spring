@@ -19,4 +19,11 @@ plugins {
 }
 
 rootProject.name = "reply_backend_spring"
-include("app", "list", "utilities")
+include("lib", "gateway", "discovery-server")
+include("test-service")
+include("company-service")
+include("block-service")
+include("delivery-service")
+include("distribution-service")
+include("stat-service")
+include("telegram-service")
