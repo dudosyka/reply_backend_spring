@@ -1,5 +1,5 @@
-package com.reply.distributionservice
+package com.reply.statservice
 
 fun main() {
-    println("distribution service")
+    println("stat service")
 }

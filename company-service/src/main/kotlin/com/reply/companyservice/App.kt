@@ -4,5 +4,5 @@
 package com.reply.companyservice
 
 fun main() {
-    println("Hello world!")
+    println("company service")
 }
