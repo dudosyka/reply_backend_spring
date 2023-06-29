@@ -1,0 +1,6 @@
+package com.reply.testservice
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+
+@SpringBootApplication
+class TestServiceApplication

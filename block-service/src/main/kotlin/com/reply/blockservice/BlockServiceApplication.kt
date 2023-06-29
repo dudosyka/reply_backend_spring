@@ -1,0 +1,6 @@
+package com.reply.blockservice
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+
+@SpringBootApplication
+class BlockServiceApplication

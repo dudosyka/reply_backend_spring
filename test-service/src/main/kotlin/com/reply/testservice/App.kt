@@ -1,5 +1,7 @@
 package com.reply.testservice
 
+import org.springframework.boot.runApplication
+
 fun main() {
-    println("test service")
+    runApplication<TestServiceApplication>()
 }

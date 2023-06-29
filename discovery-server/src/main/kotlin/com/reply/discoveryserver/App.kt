@@ -1,5 +1,7 @@
 package com.reply.discoveryserver
 
+import org.springframework.boot.runApplication
+
 fun main() {
-    println("discovery server")
+    runApplication<DiscoveryServerApplication>()
 }

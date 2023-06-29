@@ -1,12 +1,11 @@
-
-
 plugins {
     id("com.reply.kotlin-application-conventions")
+    kotlin("plugin.spring") version "1.8.22"
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-text")
     api(project(":lib"))
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
 }
 
 application {

@@ -7,7 +7,34 @@
 plugins {
     // Apply the common convention plugin for shared build configuration between library and application projects.
     id("com.reply.kotlin-common-conventions")
-
+    id("org.springframework.boot")
+    id("io.spring.dependency-management")
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+}
+
+configurations {
+    compileOnly {
+        extendsFrom(configurations.annotationProcessor.get())
+    }
+}
+
+extra["springCloudVersion"] = "2022.0.3"
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+    }
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    compileOnly("org.projectlombok:lombok")
+    annotationProcessor("org.projectlombok:lombok")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+//    implementation("io.insert-koin:koin-core:3.3.3")
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
 }
