@@ -9,7 +9,8 @@ plugins {
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-text")
+    implementation("org.springframework.cloud:spring-cloud-starter-gateway")
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     api(project(":lib"))
 }
 
