@@ -37,4 +37,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 //    implementation("io.insert-koin:koin-core:3.3.3")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+//    implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
+//    implementation("org.springframework.boot:spring-boot-starter-actuator")
+//    implementation("org.springframework.boot:spring-cloud-starter-sleuth")
+//    implementation("org.springframework.boot:spring-cloud-sleuth-zipkin")
 }
