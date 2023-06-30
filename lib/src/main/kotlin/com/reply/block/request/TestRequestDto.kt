@@ -1,6 +1,6 @@
 package com.reply.block.request
 
-data class TestRequestDto (
+data class TestRequestDto(
     val test: String,
     val testInt: Int
 )
