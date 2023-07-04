@@ -1,6 +1,6 @@
 package com.reply.testservice.service
 
-import com.reply.test.request.TestRequestDto
+import com.reply.dto.test.request.TestRequestDto
 import org.springframework.stereotype.Service
 
 @Service

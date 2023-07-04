@@ -13,3 +13,7 @@ spring:
     name: "gateway"
   main:
     web-application-type: reactive
+management:
+  tracing:
+    sampling:
+      probability: 1.0

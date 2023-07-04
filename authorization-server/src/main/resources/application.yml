@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: "authorization-server"
+  datasource:
+    url: "jdbc:mariadb://localhost:3306/test_authorization"
+    username: "root"
+    password: "my-secret-pw"
+    driver-class-name: "org.mariadb.jdbc.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  public_key: classpath:rsa.public.key
+  private_key: classpath:rsa.private.key
+#  security:
+#    oauth2:
+#      authorizationserver:
+#        client:
+#          client-1:
+#            registration:
+#              client-id: "client"
+#              # the client secret is "secret" (without quotes)
+#              client-secret: "{bcrypt}$2a$10$jdJGhzsiIqYFpjJiYWMl/eKDOd8vdyQis2aynmFN0dgJ53XvpzzwC"
+#              #              client-secret: "{default}secret"
+#              client-authentication-methods: "client_secret_basic"
+#              authorization-grant-types: "client_credentials"
+#              scopes: "block.read,block.write"
+server:
+  port: 9000
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: "http://localhost:8081/eureka"
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 5

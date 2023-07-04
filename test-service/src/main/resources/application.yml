@@ -11,3 +11,9 @@ eureka:
 spring:
   application:
     name: "test-service"
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+jwt:
+  public_key: classpath:rsa.public.key

@@ -1,4 +1,4 @@
-package com.reply.block.request
+package com.reply.dto.block.request
 
 data class TestRequestDto(
     val test: String,

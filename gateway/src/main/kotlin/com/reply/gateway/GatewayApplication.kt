@@ -8,9 +8,9 @@ import org.springframework.cloud.gateway.route.builder.routes
 import org.springframework.context.annotation.Bean
 
 @SpringBootApplication
-open class GatewayApplication {
+class GatewayApplication {
     @Bean
-    open fun routeLocator(builder: RouteLocatorBuilder): RouteLocator {
+    fun routeLocator(builder: RouteLocatorBuilder): RouteLocator {
         return builder.routes {
             route {
                 path("/api/block/**")
@@ -19,6 +19,14 @@ open class GatewayApplication {
             route {
                 path("/api/test/**")
                 uri("lb://test-service")
+            }
+            route {
+                path("/api/auth/**")
+                uri("lb://authorization-server")
+            }
+            route {
+                path("/api/check/**")
+                uri("lb://authorization-server")
             }
             route {
                 path("/eureka/web")

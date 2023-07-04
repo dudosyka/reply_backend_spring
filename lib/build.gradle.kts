@@ -5,5 +5,12 @@
  */
 
 plugins {
-    id("com.reply.kotlin-library-conventions")
+    id("com.reply.kotlin-application-reactive-conventions")
+    kotlin("plugin.spring") version "1.8.22"
+}
+
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-authorization-server")
+    implementation("org.springframework.boot:spring-boot-starter-security")
 }
