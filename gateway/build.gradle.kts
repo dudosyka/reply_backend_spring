@@ -5,13 +5,16 @@
  */
 
 plugins {
-    id("com.reply.kotlin-application-conventions")
+    id("com.reply.kotlin-application-reactive-conventions")
+    kotlin("plugin.spring") version "1.8.22"
 }
 
 dependencies {
+    api(project(":lib"))
     implementation("org.springframework.cloud:spring-cloud-starter-gateway")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-    api(project(":lib"))
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-authorization-server")
 }
 
 application {

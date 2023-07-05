@@ -1,7 +1,7 @@
 package com.reply.testservice.controller
 
-import com.reply.test.request.TestRequestDto
-import com.reply.test.response.TestResponseDto
+import com.reply.dto.test.request.TestRequestDto
+import com.reply.dto.test.response.TestResponseDto
 import com.reply.testservice.service.TestService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

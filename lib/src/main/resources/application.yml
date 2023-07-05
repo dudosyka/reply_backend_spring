@@ -1,0 +1,2 @@
+jwt:
+  public_key: classpath:rsa.public.key
